@@ -1,5 +1,5 @@
-
 document.addEventListener('DOMContentLoaded', () => {
+  // ハンバーガーメニュー展開
   const toggle = document.getElementById('navToggle');
   const mobileNav = document.getElementById('navMobile');
   if (toggle && mobileNav) {
@@ -7,8 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileNav.classList.toggle('active');
     });
   }
-});
 
+  // トップに戻るボタン
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 });
 
 // パーティクルアニメーション
