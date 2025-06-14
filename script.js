@@ -1,7 +1,14 @@
-const toggle = document.getElementById('navToggle');
-const mobileNav = document.getElementById('navMobile');
-toggle.addEventListener('click', () => {
-  mobileNav.classList.toggle('active');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('navMobile');
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+    });
+  }
+});
+
 });
 
 // パーティクルアニメーション
